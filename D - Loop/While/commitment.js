@@ -1,0 +1,22 @@
+/***
+Problem - 1
+
+"I will invest at least 6 hrs every single day for next 60 days!" this message 60 times. So display this.
+
+ */
+// let i = 1;
+// while (i <= 60) {
+//     console.log("I will invest at least 6 hrs every single day for next "+i+" days!")
+//     i++;
+
+// }
+
+
+//alternative way
+
+let j = 1;
+while (j <= 60) {
+    console.log(`I will invest at least 6 hrs every single day for next ${j} days!`)
+    j++;
+
+}
