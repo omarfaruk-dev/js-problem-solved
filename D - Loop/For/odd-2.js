@@ -18,7 +18,7 @@ for (i = 91; i <= 129; i++) {
 
 //method - 2
 
-let odd = 0;
-for (j = 91; j <= 129; j += 2) {
-    odd = odd + j;
-} console.log("The total number is: ", odd);
+// let odd = 0;
+// for (j = 91; j <= 129; j += 2) {
+//     odd = odd + j;
+// } console.log("The total number is: ", odd);
