@@ -4,7 +4,7 @@
  */
 
 
-const players = ['mushfiq', 'ashraful', 'shuvo', 'mahmudullah','mushfiq', 'ashraful' ];
+const players = ['mushfiq', 'ashraful', 'shuvo', 'mahmudullah','mushfiq', 'ashraful','mushfiq', 'ashraful', ];
 
 
 function noDuplicate(array){
