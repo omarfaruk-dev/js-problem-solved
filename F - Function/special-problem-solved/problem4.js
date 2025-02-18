@@ -15,8 +15,8 @@ function validProposal(person1, person2) {
 
 }
 
-const person1 = { name: "mitu", gender: "male", age: 32 }
-const person2 = "Mizan"
+const person1 = { name: "mitu", gender: "male", age: 30 }
+const person2 = { name: "mitu", gender: "female", age: 38 }
 
 
 let result = validProposal(person1, person2)
