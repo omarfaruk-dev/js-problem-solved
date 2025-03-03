@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-5">
+
+    <div class="bg-white shadow-lg rounded-lg p-6 space-y-6 w-full max-w-md">
+        <!-- Text Change on Click -->
+        <div class="text-center">
+            <p id="text" class="text-lg font-medium text-gray-700">Hello, World!</p>
+            <button id="change-text-btn" class="mt-2 px-4 py-2 custom-btn bg-blue-500 text-white rounded-lg">Change Text</button>
+        </div>
+
+        <!-- Background Change -->
+        <div class="text-center">
+            <button id="color-btn" class="px-4 py-2 custom-btn bg-green-500 text-white rounded-lg">Change Background</button>
+        </div>
+
+        <!-- Hide & Show Text -->
+        <div class="text-center">
+            <p id="hidden-text" class="text-lg font-medium text-gray-700">I am visible!</p>
+            <button id="toggle-btn" class="mt-2 px-4 py-2 custom-btn bg-yellow-500 text-white rounded-lg">Toggle Text</button>
+        </div>
+
+        <!-- Input Value Show in Paragraph -->
+        <div class="text-center">
+            <input id="name-input" type="text" placeholder="Enter your name"
+                class="border border-gray-300 p-2 rounded-md w-full text-center">
+            <button id="show-name-btn" class="mt-2 px-4 py-2 custom-btn bg-purple-500 text-white rounded-lg">Show Name</button>
+            <p id="output" class="text-lg font-medium text-gray-700 mt-2"></p>
+        </div>
+
+        <!-- Add & Remove List Items -->
+        <div class="text-center">
+            <ul id="item-list" class="space-y-2 list-disc text-left pl-6 text-gray-700"></ul>
+            <button id="add-item-btn" class="mt-2 px-4 py-2 custom-btn bg-red-500 text-white rounded-lg">Add Item</button>
+        </div>
+    </div>
+
+    <script>
+        // 1️⃣ Text Change on Click
+        document.getElementById('change-text-btn').addEventListener('click', function() {
+            document.getElementById('text').innerText = "Welcome to JavaScript DOM!";
+        });
+
+        // 2️⃣ Background Change
+        document.getElementById('color-btn').addEventListener('click', function() {
+            document.body.style.backgroundColor = "blue";
+            
+        });
+
+        // 3️⃣ Hide & Show Text
+        document.getElementById('toggle-btn').addEventListener('click', function() {
+            const text = document.getElementById('hidden-text');
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        });
+
+        // 4️⃣ Input Value Show in Paragraph
+        document.getElementById('show-name-btn').addEventListener('click', function() {
+            const name = document.getElementById('name-input').value;
+            document.getElementById('output').innerText = "Your Name: " + name;
+        });
+
+        // 5️⃣ Add & Remove List Items
+        document.getElementById('add-item-btn').addEventListener('click', function() {
+            const newItem = document.createElement('li');
+            newItem.innerText = "New Item Added";
+            newItem.classList.add("cursor-pointer");
+            document.getElementById('item-list').appendChild(newItem);
+        });
+
+        // Delete List Item on Click
+        document.getElementById('item-list').addEventListener('click', function(event) {
+            if (event.target.tagName === "LI") {
+                event.target.remove();
+            }
+        });
+
+        document.querySelectorAll(button).addEventListener(onmouseover, function(){
+            event.target.style.color = 'green';
+        })
+
+        document.querySelectorAll('.custom-btn').forEach(function(event){
+            event.addEventListener('onmouseenter', function(){
+                alert('Okay');
+            })
+        })
+    </script>
+
+</body>
+</html>
